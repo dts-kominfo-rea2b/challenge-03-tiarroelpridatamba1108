@@ -21,7 +21,7 @@ const dataBelanjaan = [
 ];
 
 // boleh dimodifikasi bila ingin menggunakan deklarasi fungsi yang normal
-const listBelanjaan = () => {
+const listBelanjaan = (dataBelanjaan) => {
   let jenisBarang = [];
   for (const dataBelanja of dataBelanjaan) {
     jenisBarang.push(`- ${dataBelanja.nama} x ${dataBelanja.kuantitas}`);
@@ -30,7 +30,7 @@ const listBelanjaan = () => {
 };
 
 // boleh dimodifikasi bila ingin menggunakan deklarasi fungsi yang normal
-const totalBelanjaan = () => {
+const totalBelanjaan = (dataBelanjaan) => {
   let totalHarga = 0;
   for (const dataBelanja of dataBelanjaan) {
     totalHarga += dataBelanja.kuantitas * dataBelanja.harga;
